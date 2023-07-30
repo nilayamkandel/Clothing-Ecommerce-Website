@@ -10,9 +10,9 @@ public interface IProductService {
 	
 	void updateProduct(Product product);
 	
-	void deleteProduct(int id);
+	void deleteProduct(Long id);
 	
-	Product findProductById(int id);
+	Product findProductById(Long id);
 	
 	List<Product> findAllProduct();
 	
@@ -20,5 +20,6 @@ public interface IProductService {
 
 	List<Product> findProductByCategoryId(Integer categoryId);
 
-	Product findProductByIdForAdmin(int id);
+	Product findProductByIdForAdmin(Long id);
 }
+
