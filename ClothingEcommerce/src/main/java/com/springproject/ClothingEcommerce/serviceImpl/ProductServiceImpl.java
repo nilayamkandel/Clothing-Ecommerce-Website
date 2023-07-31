@@ -33,32 +33,28 @@ public class ProductServiceImpl implements IProductService {
 	}
 
 	@Override
-	public Product findProductById(Long id) {
-		
+	public Product findProductById(Long id) {		
 		return proRepo.findById(id).get();
 	}
 
 	@Override
-	public List<Product> findAllProduct() {
-		
-		return null;
+	public List<Product> findAllProduct() {		
+		return proRepo.findAll();
 	}
 
 	@Override
-	public List<Product> findAllProductsForAdmin() {
-		
+	public List<Product> findAllProductsForAdmin() {		
 		return proRepo.findAll(); 
 	}
 
 	@Override
-	public List<Product> findProductByCategoryId(Integer categoryId) {
-		
-		return null;
+	public List<Product> findProductByCategoryId(Long categoryId) {		
+		return proRepo.findProductByCategoryId(categoryId);
 	}
 
 	@Override 
 	public Product findProductByIdForAdmin(Long id) {		
-		return null;
+		return proRepo.findById(id).get();
 	}
 
 }
