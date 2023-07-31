@@ -18,7 +18,7 @@ public interface IProductService {
 	
 	List<Product> findAllProductsForAdmin();
 
-	List<Product> findProductByCategoryId(Integer categoryId);
+	List<Product> findProductByCategoryId(Long categoryId);
 
 	Product findProductByIdForAdmin(Long id);
 }
