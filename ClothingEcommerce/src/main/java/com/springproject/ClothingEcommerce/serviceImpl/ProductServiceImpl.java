@@ -17,14 +17,12 @@ public class ProductServiceImpl implements IProductService {
 
 	@Override
 	public void addProduct(Product product) {
-		proRepo.save(product);
-		
+		proRepo.save(product);	
 	}
 
 	@Override
 	public void updateProduct(Product product) {
-		proRepo.save(product);
-		
+		proRepo.save(product);		
 	}
 
 	@Override
