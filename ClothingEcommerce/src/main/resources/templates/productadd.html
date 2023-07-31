@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Wardrobe Clothing Products</title>
+</head>
+
+<body>
+  	
+  	<th:block th:insert="header.html"></th:block> 
+   
+   <form action="/product/add" method = "post" enctype="multipart/form-data">
+  	<div class="text-center">
+  	
+  	<div class="container-fluid">
+  	<div class="card-header text-center bg-primary text-white"><h5>Product Add</h5></div><br>
+  	
+  	 <div class="row p-2">
+		<div class="col-4">Name</div>
+			<div class="col-6">
+				<input type="text" name="prod_name" class="form-control" placeholder="Enter product name..."><br>		
+			</div>
+		</div>
+		
+		
+		<div class="row p-2">
+		<div class="col-4">Price</div>
+			<div class="col-6">
+				<input type="text" name="prod_price" class="form-control" placeholder="Enter product price..."><br>		
+			</div>
+		</div>
+		
+		
+		<div class="row p-2">
+		<div class="col-4">Code</div>
+			<div class="col-6">
+				<input type="text" name="prod_code" class="form-control" placeholder="Enter product code.."><br>		
+			</div>
+		</div>
+		
+		<div class="row p-2">
+		<div class="col-4">Description</div>
+			<div class="col-6">
+				<input type="text" name="prod_description" class="form-control" placeholder="Short description of product..."><br>		
+			</div>
+		</div>
+		
+		<div class="row p-2">
+		<div class="col-4">Quantity</div>
+			<div class="col-6">
+				<input type="text" name="prod_quantity" class="form-control" placeholder="Quantity of product..."><br>		
+			</div>
+		</div>
+		
+	
+		<div class="row p-2">
+			      <div class="col-4">Category</div>
+			      <div class="col-6">
+			         
+			         <select name="category" class="form-control">			  
+			         	<option value="">Select</option>
+			         	<option th:each="cat:${catlist}" th:value="${cat.id}">[[${cat.cname}]]</option>			        			         
+			         </select>			     
+			      
+			      </div>
+			</div>	<br>
+			
+			<div class="row p-2">
+			      <div class="col-4">Select Image</div>
+			      <div class="col-6">
+			          <input type="file" name="image" class="form-control">
+			      </div>
+			   </div>
+	
+	</div><br>   
+			 
+				   
+			   <div class="row p-2">
+			      <div class="col-4"></div>
+			      <div class="col-2">
+			          <input type="submit" value="Add" class="btn btn-success btn-lg"><br><br><br><br>
+			      </div>
+			   </div>
+</div>
+   </form>
+   
+   <th:block th:insert="footer.html"></th:block>
+  </body>
+
+</html>
