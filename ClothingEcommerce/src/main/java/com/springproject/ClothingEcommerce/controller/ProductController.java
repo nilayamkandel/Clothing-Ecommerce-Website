@@ -86,7 +86,7 @@ public class ProductController {
 				
 				proService.updateProduct(product);
 				
-				model.addAttribute("message", "Product added successfully !!");
+				model.addAttribute("message", "Product updated successfully !!");
 				return "redirect:/product/list";		
 	}
 		 return "productedit";
